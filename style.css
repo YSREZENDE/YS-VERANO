@@ -1,0 +1,162 @@
+/**menu**/
+.menu{
+   font-family: "Poppins", sans-serif;
+}
+.my-sm-0{
+   background-color: #000;
+   
+}
+.text-info{
+   font-family: "Poppins", sans-serif;
+   color: #000;
+}
+
+
+/** index**/
+#verano{
+  font-family: "Playfair display","Poppins", sans-serif;
+font-size: 2rem;
+}
+.verano p{
+   font-family: "Poppins", sans-serif;
+}
+#tema{
+   font-family: "Poppins", sans-serif;
+font-size: 1.8rem;
+margin-top: 1.8rem;
+
+}
+#fire{
+   font-family: "Poppins", sans-serif;
+}
+
+.vermais{
+   margin-top: 5%;
+}
+   
+.mais{
+   margin-top: 1%;
+   
+   border-radius: 5px;
+   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+   color: white;
+   background-color: #000;
+}
+
+
+/**index estampas**/
+
+
+
+#estampa {
+font-family: "Poppins", sans-serif;
+font-size: 1rem;
+margin-top: 1rem;
+
+}
+.stamp{
+   transition: all 0.3s ease-out; 
+}
+.stamp:hover {
+   transform: translateY(-5px);
+   cursor: pointer;
+}
+
+/** index cards**/
+
+.card {
+   align-items: center;
+   border-radius: 5px;
+  
+   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+   padding: 30px;
+   margin: 20px;
+   width: 350px;
+   transition: all 0.3s ease-out;
+ }
+  
+ .image {
+   align-items: center;
+   max-width: 450px;
+   max-height: 400px;
+ }
+ body {
+   font-family: "Poppins", sans-serif;
+   background-color: #fafafa;
+ }
+  
+ .row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ /**dropdown categorias**/
+ .dropdown menu{
+   margin-right: 5%;
+ }
+
+/** index OUTLET**/
+
+#outlet{
+   margin-top: 6%;
+   font-family: "Poppins", sans-serif;
+   box-shadow:10px 1px 5px rgba(255, 255, 255, 0.22);
+   background-color: #000;
+   color: #fafafa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**end card biquinis**/
+/**ARPOADOR**/
+.dropdown{
+   align-items: center;
+}
+/**footer**/
+.footer{
+  margin-top: 7%;
+}
+.mapa iframe{
+   width: auto;
+   height: 15rem;
+}
+.sociais {
+   font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+
