@@ -1,9 +1,9 @@
 <?php
 require_once 'head.php';
         include_once 'conexao.php';
-        include_once 'menu.php';
 
-       
+        session_start();
+	    ob_start();
 ?>
 
 <?php
@@ -11,10 +11,12 @@ require_once 'head.php';
 //echo "senha".password_hash(123, PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+//var_dump($dadoslogin);
+
 
 if (!empty($dadoslogin['btnlogin'])) {
 
-        $buscalogin = "SELECT ID_VENDEDOR, NOME, EMAIL,SENHA
+        $buscalogin = "SELECT  NOME SENHA,EMAIL
                                 FROM vendedor
                                 WHERE EMAIL =:usuario  
                                 LIMIT 1";
@@ -23,20 +25,28 @@ if (!empty($dadoslogin['btnlogin'])) {
         $resultado->bindParam(':usuario', $dadoslogin['usuario'], PDO::PARAM_STR);
         $resultado->execute();
 
+
+
+        
+            
+
         if(($resultado) AND ($resultado->rowCount() != 0)){
             $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
-            //var_dump($resposta);
-            //var_dump($dadoslogin);
+           //var_dump($resposta);
+           
 
-            if(password_verify($dadoslogin['senha'], $resposta['senha'])){
+     
+
+
+            if(password_verify($dadoslogin['senha'], $resposta['SENHA'])){
                 
-                $_SESSION['nome'] = $resposta['nome'];
-                if( $_SESSION["carrinho"]==true){ $_SESSION['ID_CLIENTE'] = $resposta['ID_CLIENTE'];
+                $_SESSION['nome'] = $resposta['NOME'];
+                if( $_SESSION["carrinho"]==true){ $_SESSION['ID_VENDEDOR'] = $resposta['ID_VENDEDOR'];
                 
                 header("Location: frmcarrinho.php");
             }
             else{
-            header("Location: administrativo.php");
+            header("Location: admin.php");
         }
 
     }
@@ -64,11 +74,6 @@ if(isset($_SESSION['msg'])){
 
 
 ?>
- <div class="text-center">
-<div class="title">
-    <h1><br>Administrativo</br></h1>
-</div>
- </div>
 
 <form id="login-form" class="form" action="" method="POST">
                             
@@ -81,46 +86,9 @@ if(isset($_SESSION['msg'])){
                                 <input type="password" name="senha" id="password" class="form-control">
                             </div>
                             <div class="form-group">
-                            <button  class="btn btn-info btn-md" value="Enviar" name="btnlogin"><a href="admin.php"></a>Entrar</button>
-        
+                               
+                           <input type="submit" class="btn btn-info btn-md" value="Enviar" name="btnlogin">
+                        
                             </div>
                             
                         </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-require_once 'footer.php';
-                        ?>

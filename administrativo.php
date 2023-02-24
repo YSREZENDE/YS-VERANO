@@ -1,9 +1,8 @@
 <?php
 
   require_once 'head.php';
-
-    session_start();
-    ob_start();
+  require_once 'menu.php';
+    
   
 
 ?>  

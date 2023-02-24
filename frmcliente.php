@@ -85,6 +85,30 @@
                 </div>
             </div>
         </div>
+        <div class="row">     
+
+<div class="col-md-5">
+    <div class="form-group">
+         <label for="bairro">Bairro</label><p>
+            <input type="text" class="form-control" id="bairro" name="bairro">
+ </div>
+</div>
+
+<div class="col-md-5">
+    <div class="form-group">
+        <label for="cidade">Cidade</label><p>
+            <input type="text" class="form-control" id="cidade" name="cidade">
+ </div>
+</div>
+
+<div class="col-md-2  ">
+    <div class="form-group">
+            <label for="uf">Estado</label><p>
+                <input type="text" class="form-control" id="uf" name="uf">
+    </div>
+        </div>
+</div>
+
 
         
         <div class="row">   

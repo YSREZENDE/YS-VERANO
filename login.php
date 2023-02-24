@@ -2,8 +2,7 @@
 require_once 'head.php';
         include_once 'conexao.php';
 
-        session_start();
-	    ob_start();
+    require_once 'menu.php';
 ?>
 
 <?php
@@ -11,6 +10,8 @@ require_once 'head.php';
 //echo "senha".password_hash(123, PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+//var_dump($dadoslogin);
+
 
 if (!empty($dadoslogin['btnlogin'])) {
 
@@ -23,14 +24,22 @@ if (!empty($dadoslogin['btnlogin'])) {
         $resultado->bindParam(':usuario', $dadoslogin['usuario'], PDO::PARAM_STR);
         $resultado->execute();
 
+
+
+        
+            
+
         if(($resultado) AND ($resultado->rowCount() != 0)){
             $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
-            //var_dump($resposta);
-            //var_dump($dadoslogin);
+           //var_dump($resposta);
+           
 
-            if(password_verify($dadoslogin['senha'], $resposta['senha'])){
+     
+
+
+            if(password_verify($dadoslogin['senha'], $resposta['SENHA'])){
                 
-                $_SESSION['nome'] = $resposta['nome'];
+                $_SESSION['nome'] = $resposta['NOME'];
                 if( $_SESSION["carrinho"]==true){ $_SESSION['ID_CLIENTE'] = $resposta['ID_CLIENTE'];
                 
                 header("Location: frmcarrinho.php");
@@ -77,8 +86,8 @@ if(isset($_SESSION['msg'])){
                             </div>
                             <div class="form-group">
                                
-                                <input type="submit"  class="btn btn-info btn-md" value="Enviar" name="btnlogin">
-                                <input type="submit" name="cadastro" class="btn btn-info btn-md" value="Cadastre-se">
+                           <input type="submit" class="btn btn-info btn-md" value="Enviar" name="btnlogin">
+                            <a href="frmcliente.php"><button type="button" class="btn btn-info btn-dark" value="Cadastre-se" name="cadastro">Cadastre-se</button></a>
                             </div>
                             
                         </form>
