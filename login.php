@@ -73,12 +73,17 @@ if(isset($_SESSION['msg'])){
 
 
 ?>
+<div class="acesso-cliente text-center">
+    <h1><br>Acesso ao sistema</br></h1>
+</div>
 
 <form id="login-form" class="form" action="" method="POST">
                             
                             <div class="form-group">
-                                <label for="username" class="text-info">Nome de Usuário:</label><br>
+                   
+                                <label for="username" class="text-info">Email Cadastrado:</label><br>
                                 <input type="text" name="usuario" id="username" class="form-control">
+                             
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Senha:</label><br>
@@ -86,8 +91,12 @@ if(isset($_SESSION['msg'])){
                             </div>
                             <div class="form-group">
                                
-                           <input type="submit" class="btn btn-info btn-md" value="Enviar" name="btnlogin">
+                           <input type="submit" class="btn btn-info btn-dark" value="Enviar" name="btnlogin">
                             <a href="frmcliente.php"><button type="button" class="btn btn-info btn-dark" value="Cadastre-se" name="cadastro">Cadastre-se</button></a>
                             </div>
                             
                         </form>
+                        <?php
+                        require_once 'footer.php';
+                        
+                        ?>

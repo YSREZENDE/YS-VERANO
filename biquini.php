@@ -27,32 +27,6 @@
     <p>BIQUINIS</p>
 
 </div>
-<!--button categorias-->
-<div class="dropdown">
-  <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Categorias
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <!-- selct categoria-->
-  <?php
-$sql = "SELECT categoria.ID_CATEGORIA,categoria.DESCRICAO  from categoria";
-$resultado=$conn->prepare($sql);
-$resultado->execute();
-
-if (($resultado) and ($resultado->rowCount() != 0)) { 
-    while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
-
-        extract($linha);
-
-?>
-<a class="dropdown-item" href="#" <?php echo $ID_CATEGORIA;?>> <?php echo $DESCRICAO; ?> </a>
-
-<?php
-    }
-}
-?>
-  </div>
-</div>
 <!--end button categorias-->
 
 <!--categoria bnt-->

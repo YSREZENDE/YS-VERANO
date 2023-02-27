@@ -37,7 +37,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="maio.php">Maiôs</a>
                 <a class="dropdown-item" href="biquini.php">Biquínis</a>
-                <a class="dropdown-item" href="divercos.php">Diverços</a>
+                <a class="dropdown-item" href="divercos.php">Diversos</a>
               
         
               </div>

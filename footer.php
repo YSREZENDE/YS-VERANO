@@ -6,7 +6,7 @@
           <p><a href="index.php">Home</a></p>
           <p><a href="maio.php">Maiôs</a></p>
           <p><a href="biquini.php">Biquínis</a></p>
-          <p><a href="divercos.php">Diverços</a></p>
+          <p><a href="divercos.php">Diversos</a></p>
          
         </div>
 

@@ -129,8 +129,8 @@ roupa.ID_CATEGORIA = categoria.ID_CATEGORIA and
 </div>
 
 <div class=" text-center">
-      <h1 id="tema">OUTLET</h1>
-      
+      <h1 id="out">OUTLET</h1>
+</div>
 <?php
 $busca= "SELECT  roupa.ID_PRODUTO,roupa.PRODUTO_NOME,roupa.VALOR,roupa.FOTO
   FROM roupa,categoria  WHERE 

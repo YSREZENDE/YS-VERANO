@@ -47,12 +47,19 @@ if(($resultado)and($resultado->RowCount()!=0)){
           <td><?php echo $TAMANHO ?></td>
           <td><?php echo $total = $QUANTCOMPRA * $VALOR; 
           $totalcompra += $total; ?></td>
+        
+
+
+
+
          
         <td>                 
              <a href="finalizacarrinho.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $CODIGOPRODUTO; ?>">Excluir</button></a>
           </td>
         </tr>        
-         
+       
+        
+        
 
 <?php   
 } ?>

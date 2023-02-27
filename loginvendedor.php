@@ -1,9 +1,9 @@
 <?php
 require_once 'head.php';
+require_once 'menu.php';
         include_once 'conexao.php';
 
-        session_start();
-	    ob_start();
+        
 ?>
 
 <?php
@@ -16,7 +16,7 @@ $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (!empty($dadoslogin['btnlogin'])) {
 
-        $buscalogin = "SELECT  NOME SENHA,EMAIL
+        $buscalogin = "SELECT  ID_VENDEDOR, NOME, EMAIL ,SENHA
                                 FROM vendedor
                                 WHERE EMAIL =:usuario  
                                 LIMIT 1";
@@ -74,11 +74,14 @@ if(isset($_SESSION['msg'])){
 
 
 ?>
+<div class="text-center">
+    <h1>Administrativo</h1>
+</div>
 
 <form id="login-form" class="form" action="" method="POST">
                             
                             <div class="form-group">
-                                <label for="username" class="text-info">Nome de Usuário:</label><br>
+                                <label for="username" class="text-info">Email do Usuário:</label><br>
                                 <input type="text" name="usuario" id="username" class="form-control">
                             </div>
                             <div class="form-group">
@@ -87,8 +90,11 @@ if(isset($_SESSION['msg'])){
                             </div>
                             <div class="form-group">
                                
-                           <input type="submit" class="btn btn-info btn-md" value="Enviar" name="btnlogin">
+                          <input type="submit" class="btn btn-info btn-dark" value="Enviar" name="btnlogin">
                         
                             </div>
                             
                         </form>
+                        <?php
+                        require_once 'footer.php';
+                        ?>

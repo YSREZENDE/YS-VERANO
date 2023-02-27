@@ -139,6 +139,32 @@ margin-top: 1rem;
 .dropdown{
    align-items: center;
 }
+
+/*********************** FRM CLIENTE*******************/
+.login{
+   display: flex;
+   justify-content: space-between;
+   
+   margin: 2% auto;
+   width: 90%;
+   border-radius: 10px 10px 0 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**footer**/
 .footer{
   margin-top: 7%;
